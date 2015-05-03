@@ -1,13 +1,19 @@
 # Sizeable WebView 
 
-Sizeable WebViewis a fully featured Windows Phone 8.1 WebView control with the following additions:
+Sizeable WebView is a fully featured Windows Phone 8.1 WebView control with the following additions:
 
-  - An option to disable web view interactions: zooming, scrolling, etc. 
-  - Auto height setup accoring to the web view's content length.
+  - Auto height setup according to the web view's content length.
+  - An option to disable view interactions: zooming, scrolling, etc. 
 
 ### Installation
+  - Clone (or download) the project.
+  - Add the project (or just the .cs and .xaml files) to your existing solution.
+  - Add a reference in your Windows Phone project.
+  
 
 ### Usage
+
+At the desirable page, add the following xaml (don't forget to add the namespace):
 
 ```sh
 $ npm i -g gulp
@@ -21,6 +27,9 @@ $ mkdir -p public/files/{md,html,pdf}
 $ gulp build --prod
 $ NODE_ENV=production node app
 ```
+
+**ContentAware -** set to true in order to set the height of the control according to the HTML content's length. 
+**InteractionsEnabled -** set to false in order to disable view interactions (zooming, scrolling etc.);
 
 License
 ----
