@@ -16,21 +16,22 @@ Sizeable WebView is a fully featured Windows Phone 8.1 WebView control with the 
 At the desirable page, add the following xaml (don't forget to add the namespace):
 
 ```sh
-$ npm i -g gulp
+<components:SizeableWebView x:Name="contentAwareWebView" IsContentAware="True" InteractionsEnabled="False" />
 ```
 
-```sh
-$ git clone [git-repo-url] dillinger
-$ cd dillinger
-$ npm i -d
-$ mkdir -p public/files/{md,html,pdf}
-$ gulp build --prod
-$ NODE_ENV=production node app
-```
-
-**ContentAware -** set to true in order to set the height of the control according to the HTML content's length. 
+**IsContentAware -** set to true in order to set the height of the control according to the HTML content's length. 
 **InteractionsEnabled -** set to false in order to disable view interactions (zooming, scrolling etc).
 **WebView -** an access propery for the native WebView control.
+
+
+Then, use the following function in order to navigate to your HTML content:
+
+```sh
+contentAwareWebView.NavigateToContent(yourHTMLContent);
+```
+
+Best for applications that consume content from RSS/WebService as HTML.
+
 
 License
 ----
