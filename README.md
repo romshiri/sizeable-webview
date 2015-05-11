@@ -20,9 +20,7 @@ At the desirable page, add the following xaml (don't forget to add the namespace
 ```
 
 **IsContentAware -** set to true in order to set the height of the control according to the HTML content's length. 
-
 **InteractionsEnabled -** set to false in order to disable view interactions (zooming, scrolling etc).
-
 **WebView -** an access propery for the native WebView control.
 
 
